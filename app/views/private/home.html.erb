@@ -1,0 +1,9 @@
+<% #Olivier Lafleur 10 novembre %>
+<h1>Liste de mes recettes : </h1>
+<% @recettes.each do |p| %>
+  <p>
+      <a href='/mesrecettes/<%= p.id %>'>
+          <%= p.titre %>
+      </a>
+  <p>
+<% end %>    

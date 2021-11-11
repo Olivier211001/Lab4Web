@@ -1,0 +1,9 @@
+<% #Olivier Lafleur 10 novembre %>
+<h2>ma recette</h2> 
+<h2>Recette : <%= @recette.titre %></h2> 
+<h3>Les ingrédients :</h3>
+<% @recette.ingredients.each_with_index do |p, q| %>
+    <p><%= p.nom %>  <b> Quant: </b> <%=  @recette.recette_ingredients[q].quantite  %> <b> Unité de mesure : </b><%=  @recette.recette_ingredients[q].unite  %><p>
+<% end %>
+<h3>Les étapes :</h3>
+<p><%= @recette.etapes %><p>
